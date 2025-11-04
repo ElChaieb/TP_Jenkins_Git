@@ -3,8 +3,8 @@ agent any
 options { timestamps() }
 stages {
 stage('Cloner le dépôt') {
-steps {
-git url: 'https://github.com/ElChaieb/TP_Jenkins_Git.git', branch: 'main'
+  steps {
+git url: 'https://github.com/Zayneeb/projetJenkins.git', branch: 'main'
 }
 }
 stage('Étape 1 : Vérification du dépôt') {
@@ -31,9 +31,8 @@ bat 'echo === Étape 4 : Fin du build ==='
 bat 'echo SUCCESS'
 }
 }
-
 }
 post {
 success { echo ' Build OK' }
 failure { echo ' Build KO' }
-}
+}}
